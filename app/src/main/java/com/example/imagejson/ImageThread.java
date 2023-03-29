@@ -25,12 +25,6 @@ public class ImageThread extends Thread{
 
     @Override
     public void run() {
-        handler.post(new Runnable() {
-            @Override
-            public void run() {
-                Toast.makeText(context, page, Toast.LENGTH_SHORT).show();
-            }
-        });
         try {
             URL url = new URL(page);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
